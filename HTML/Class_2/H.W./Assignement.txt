@@ -1,0 +1,11 @@
+HTML Basics II
+1. Why there is no h7, h8.... Tags ( Tags> h6) 
+2. How to colour horizontal line
+3. How to restrict the background colour boundary till the written text in a given line(span only till the written text) 
+4. Mdn docs (Quotation and citation tags(Block quote, q, cite, address, abbr)  
+5. How to add a fevicon
+6. Make the homework website as discussed in lecture before next class
+7. Create table from image shared on discord (pinned in homework section)
+8. Create a form shown in the class which will be taught by lakshay bhaiya you can try yourself
+9. rowspan polapan,rowgap , colgap, 
+10.How to change the width/height of background color?
