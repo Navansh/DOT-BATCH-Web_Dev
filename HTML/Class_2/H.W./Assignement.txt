@@ -1,7 +1,7 @@
 HTML Basics II
 1. Why there is no h7, h8.... Tags ( Tags> h6) 
 2. How to colour horizontal line
-3. How to restrict the background colour boundary till the written text in a given line(span only till the written text) 
+3. How to restrict the background colour boundary till the written text in a given line(span only till the written text)  - Done using -> display: inline-block;
 4. Mdn docs (Quotation and citation tags(Block quote, q, cite, address, abbr)  
 5. How to add a fevicon
 6. Make the homework website as discussed in lecture before next class
