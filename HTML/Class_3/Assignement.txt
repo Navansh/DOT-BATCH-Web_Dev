@@ -1,5 +1,5 @@
 H.W.
 1 Code the table  
 2 Why does Rowgroup doesn't exist ? 
-
+3 Read the last page of HTML Cheatsheet (which is already provided)
 
