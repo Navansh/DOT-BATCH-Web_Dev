@@ -5,3 +5,42 @@
 5) span tag --- display: block == div tag?
 6)  how to move float tag into center?(float property in central posible?)
 7) Different between body and main tag?
+
+
+1.Difference between h1 and head tag?
+Sol:
+ The head is the tag at the top of your page containing your meta-tags, styles, scripts and title. headings are the h1, h2, h3 etc tags that allow you to size your text.
+
+2. Can we add footer tag inside header tag?
+YES, we can add a footer inside the header, but it's NOT a GOOD PRACTICE to do so. Hence not recommended.
+
+3. can we use multiple header tags
+Yes we can use multiple header elements in our documents
+
+4. Can we center aside tag to center?
+
+i don't think so I was able to do the container center but the text-doesn't seem to corporate 🙂
+
+5. difference between body tag and main tag
+body is everything, main is the main content. Navigation for example is not main content. Footer is not main content and so on
+
+1.header vs h1 tag, when we use them
+ Header element represents the header of a page, it typically contains the page logo, title and maybe some nav links.
+whereas, h1 tag represents the most important heading on the page. it is generally used for main heading of header section.
+
+2.kya footer ke andar header use kar sakta hoon
+ Footer is a semantic tag that is used to represent the footer of a page, we can use the footer inside header but we are then intentionally writing semantically incorrect code which can cause problems for search engines optimization.
+
+3.kya multiple header use kar sakta hoon
+we can use multiple header for the same page by giving all the section of that webpage their own header element.
+
+4.aside tag center mein aa sakta hai
+ yes we can bring the aside element in center by using css
+    aside {
+          margin: auto;
+          width: 50%;
+          text-align: center;
+    }
+5. body tag aur main tag mein difference
+body tag is use to enclose all the content represented on browser thus it contains main, sidebars, nav, footer etc.
+while, main tag is used to represent only main content of the page, so it doesn't contain sidebars, nav, footer.
