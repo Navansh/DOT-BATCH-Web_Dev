@@ -1,1 +1,7 @@
-dw
+1) Different between h1 and header tag?
+2) can we use footer tag inside header tag?
+3) can we use header tag inside footer tag?
+4) div tag ---.  display: inline==span tag?
+5) span tag --- display: block == div tag?
+6)  how to move float tag into center?(float property in central posible?)
+7) Different between body and main tag?
