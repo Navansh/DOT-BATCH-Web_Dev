@@ -1,1 +1,4 @@
-Do
+Do Explore : 
+   Universal Selector
+   Nested Selector
+   Attribute Selector
