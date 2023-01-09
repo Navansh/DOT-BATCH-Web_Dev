@@ -5,3 +5,6 @@ Do Explore :
    RGBA Colors
    HSL Colors
    HSLA Colors
+   Font-(family, weight, style)
+   Emphasis and Importance
+   How to add External Fonts ? 
