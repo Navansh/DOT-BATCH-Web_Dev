@@ -1,3 +1,4 @@
 Explore Conical Gradient 
 How can we add Border using Shadows ? 
 Create the given parallax webpage - https://codehelp-parallax-website.netlify.app/
+Postition text in all corners and centre of image.
