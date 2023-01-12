@@ -8,6 +8,9 @@ Do Explore :
    Font-(family, weight, style)
    Emphasis and Importance
    How to add External Fonts ? 
+   Difference b/w 1% and 1vw ? 
+   Difference b/w viewport vs root ? 
+   
 
 H.W.
    Style Tribute Page
