@@ -1,2 +1,3 @@
 DO : 
 Why not put image using <img> in HTML instead of putting it in background image in CSS(takeout hardcopy and then check what's the difference)
+Make the Product card for the Coffee Mug -  https://codehelp-product-card.netlify.app/
