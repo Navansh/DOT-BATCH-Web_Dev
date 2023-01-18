@@ -1,2 +1,0 @@
-Do : 
-Create the given parallax webpage - https://codehelp-parallax-website.netlify.app/

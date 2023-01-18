@@ -1,4 +1,0 @@
-Explore Conical Gradient 
-How can we add Border using Text Shadows ? 
-Postition text in all corners and centre of image.
-When rotating with respect to Z - Axis why don't we need perspective ? 
