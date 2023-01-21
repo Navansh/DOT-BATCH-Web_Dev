@@ -1,1 +1,2 @@
 Do : 
+1. Make the loading animation of circle revolving
