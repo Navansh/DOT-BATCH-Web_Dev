@@ -1,3 +1,4 @@
 Do : 
 1. Make the loading animation of circle revolving
 2. Make the Hire Me button 
+3. Design 10 CSS Animated Buttons
