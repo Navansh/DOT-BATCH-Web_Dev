@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#wrapper{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+.container{
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* content ko center mein place karne ke liye  */
+    /* top and bottom: 0 margin */
+    /* left and right: auto margin, hence effectively centering it */
+    padding: 20px;
+}
+.container h1{
+    text-align: center;
+    margin: 10px 0;
+    font-family:fantasy;
+    margin-bottom: 20px;
+    font-size: 3rem;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card{
+    width: 32%;
+    /* iss 32% se hamne mention kar diya ki haamari row mein 3 hi elements aayenge */
+    /* taaki we can place 3 images in a row and 4% space bach jaaye for space b/w images */
+    position: relative;
+    /* taaki jo text hamein iske upar overlap karwaana hai usse absolute kar sakein */
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    /* this will prevent image from overflowing in both x and y direction and ab woh  */
+    /* image card ki size ko match karegi */
+}
+.card img{
+    height: 100%;
+    /* sabko ek baseline(matching height) mein laane ke liye (uss row mein) ye use kara 
+    kyunki agar ek img jyada height le legi toh poori row ki height wohi ho jayegi
+    and so to match 100% saare elements ko stretch karna hoga
+    also isse rounded corner mil jayenge image ko from parent */
+    width: 100%;
+    /* jo bhi parent element hai uski jitni width kar do and parent ki 32% hai from gallery */
+    filter: grayscale(100%);
+    box-shadow: 0 0 20px #333;
+    object-fit: cover;
+}
+.card:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 10px rgb(55, 55, 54));
+    transition: 0.3s;
+    
+}
+
+.card:hover img{
+    transition: .3s;
+    filter: grayscale(0%);
+    /* isse color waapis aa jayega  */
+    /* transition: all 0.3s ease-in-out; */
+}
+.card figcaption{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 25px;
+    width: 100%;
+    height: 20%;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    opacity: 0;
+    /* isse text dikhega hi nhi  */
+    border-radius: 0 0 10px 10px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    transition: 0.3s;
+}
+.card:hover figcaption{
+    opacity: 1;
+    transform: 1.03;
+}
+
+
