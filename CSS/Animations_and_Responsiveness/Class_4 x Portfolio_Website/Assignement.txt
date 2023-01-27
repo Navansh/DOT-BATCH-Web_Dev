@@ -1,0 +1,2 @@
+Do : 
+  1. Add Media Queries to the Portfolio Website 
