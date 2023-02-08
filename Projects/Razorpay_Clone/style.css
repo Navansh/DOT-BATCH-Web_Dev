@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.featureCard:hover .featureCardIcon {
+    background-image: linear-gradient(30.55deg, #6ac7ff 11.05%, #148aff 90.09%);
+    box-shadow: 0px 2px 22px rgb(202 202 202 / 25%);
+  }
+  
+  .featureCard:hover .featureCardSVG {
+    filter: drop-shadow(0px 2px 22px rgba(202, 202, 202, 0.25));
+    stroke-opacity: 0 !important;
+  }
+  
+  .featureCard:hover .featureCardBox {
+    background-image: url("./assets/features-wave.svg");
+    background-repeat: no-repeat;
+    background-position: bottom 1rem right;
+  }
+  
+  .featureCard2:hover .featureCardBox {
+    background-image: url('/assets/features2-wave.svg');
+    background-repeat: no-repeat;
+    background-position: bottom 1rem right;
+  }
+  
+  .featureCard2:hover .featureCardSVG {
+    filter: drop-shadow(0px 2px 24px rgba(0, 0, 0, 0.4));
+    stroke-opacity: 0 !important;
+  }
+  
+  .featureCard2:hover .featureCardIcon {
+    background-image: linear-gradient(188.57deg, #2095ff -16.05%, #6416ff 116.32%);
+    box-shadow: 0px 2px 24px rgb(0 0 0 / 40%);
+    transition: all 200ms ease-in-out;
+  }
+  
+  .newFeatureCard {
+    box-shadow: 2px 4px 9px 1px hsla(0, 0%, 0%, 0.05);
+  }
+
+  .corefeaturesection{
+    background-size: 100% 100%;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+  .companiesList{
+    animation:10s infinite linear moveCompany;
+  }
+
+  @keyframes moveCompany {
+    0%{
+      top:0;
+    }
+    100%{
+      top:-50%;
+    }
+  }
+.ctaSection{
+  background-size: 100% 100%;
+}
