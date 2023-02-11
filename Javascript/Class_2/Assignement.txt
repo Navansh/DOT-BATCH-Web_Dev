@@ -1,1 +1,12 @@
 Do 
+1) What is the hack to use For Of Loop for Objects, Find out
+
+Ans :- use Object.key(rectangle) for keys
+Use Object.entries(rectangle) for values too
+Syntax:-
+for (let key of Object.keys(rectangle) {
+     Console.log(key)
+}
+
+
+2) Practice All Concepts
