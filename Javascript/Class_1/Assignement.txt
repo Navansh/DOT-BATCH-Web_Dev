@@ -1,3 +1,19 @@
 Do : 
-  Difference b/w Java and javascript
+  1) Explore Java Language v/a Javascript Language (difference and similarity)
+
+  2) Redeclaration in the case of var variable is possible or not? 
+  (Its not possible for let)
+
+  3) What if in arrays in javascript we access the index which is not present in array 
+  Let us say, Array name has 3 index 
+  Access :- name[3] , what will be the output?
+
+  4) let name = 5 
+  When we print 
+  Name was stricked -name-
+  Find out Why?
+
+  5) Find out Falsy Truthy concept for AND Logical Operator
+
+  6) Find Out Infinite Loop concept 
   
