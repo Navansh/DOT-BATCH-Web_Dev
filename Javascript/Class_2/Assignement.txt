@@ -9,4 +9,4 @@ for (let key of Object.keys(rectangle) {
 }
 
 
-2) Practice All Concepts
+2) Practice All Concepts till now 
