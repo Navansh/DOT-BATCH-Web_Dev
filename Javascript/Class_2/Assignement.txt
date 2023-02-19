@@ -8,5 +8,4 @@ for (let key of Object.keys(rectangle) {
      Console.log(key)
 }
 
-
 2) Practice All Concepts till now 
