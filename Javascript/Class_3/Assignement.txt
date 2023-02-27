@@ -1,0 +1,1 @@
+How to do combining and slicingfor array of objects ? 
