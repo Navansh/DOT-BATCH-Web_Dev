@@ -1,1 +1,2 @@
 Do : 
+How to make children elements retain their css properties when the parent elements CSS properties are applied ? 
