@@ -8,13 +8,52 @@ Can we say that mongodb runs on node.js
 Ans : No, MongoDB is not built on or run by Node.js. MongoDB is a standalone database management system that can be used with many programming languages, including JavaScript which is the language used by Node.js.Node.js can interact with MongoDB and provide an interface to it, but it does not run MongoDB. MongoDB runs as a separate process on its own server, regardless of what programming language is used to interact with it.However, Node.js can be used as a server-side technology for web applications that use MongoDB as their database. In this scenario, Node.js provides the application logic and interfaces with MongoDB to read and write data into the database. This allows developers to build end-to-end web applications using JavaScript.
 
 can node.js handle multithreading ? 
-Node.js is designed to be single-threaded, meaning it only uses one thread to process incoming requests and execute application code. However, Node.js does support asynchronous I/O operations, which allows it to handle multiple requests at the same time without blocking the event loop.  To take advantage of multiple CPU cores, Node.js provides a cluster module that allows developers to create a cluster of worker processes that can share the workload across multiple threads. Each worker process runs on a separate thread, which allows Node.js to take full advantage of multi-core systems.The cluster module works by creating child processes, each running an instance of the Node.js event loop, and sharing server sockets between them. When a new connection is received, the master process distributes it to one of the worker processes using a round-robin algorithm.It's important to note that while the cluster module allows Node.js to take advantage of multiple CPU cores, it does not provide true multithreading, as the worker processes are still single-threaded themselves. Instead, the cluster module creates multiple instances of the Node.js runtime environment, each with its own event loop and memory space.In summary, while Node.js itself is single-threaded, it provides the cluster module for developers to take advantage of multiple cores and distribute the workload across multiple worker processes.
+Ans : Node.js is designed to be single-threaded, meaning it only uses one thread to process incoming requests and execute application code. However, Node.js does support asynchronous I/O operations, which allows it to handle multiple requests at the same time without blocking the event loop.  To take advantage of multiple CPU cores, Node.js provides a cluster module that allows developers to create a cluster of worker processes that can share the workload across multiple threads. Each worker process runs on a separate thread, which allows Node.js to take full advantage of multi-core systems.The cluster module works by creating child processes, each running an instance of the Node.js event loop, and sharing server sockets between them. When a new connection is received, the master process distributes it to one of the worker processes using a round-robin algorithm.It's important to note that while the cluster module allows Node.js to take advantage of multiple CPU cores, it does not provide true multithreading, as the worker processes are still single-threaded themselves. Instead, the cluster module creates multiple instances of the Node.js runtime environment, each with its own event loop and memory space.In summary, while Node.js itself is single-threaded, it provides the cluster module for developers to take advantage of multiple cores and distribute the workload across multiple worker processes.
+
+Q: What are some myths/confusions/misconceptions about JSON Web Tokens
+Ans : There are several myths and misconceptions about JSON Web Tokens (JWTs). Here are a few:
+
+JWTs are encryption mechanisms: One of the most common misconceptions is that JWTs are used for encryption or data protection. However, this is not true. JWTs are primarily used for authentication and authorization purposes.
+
+JWTs cannot be revoked: There is a belief that once a JWT is issued, it cannot be revoked. However, JWTs can be invalidated by maintaining a blacklist of revoked tokens on the server.
+
+JWTs provide absolute security: While JWTs are secure and provide good protection against tampering, they are not foolproof. It is still possible for a determined attacker to intercept and decode JWTs if proper security measures are not taken.
+
+JWTs are only useful for web applications: Although JWTs are commonly used in web applications, they can be used in any system that requires secure communication across multiple domains or systems.
+
+JWTs contain sensitive information: While JWTs can carry information, including user data, they should not be used to transmit sensitive information like passwords or credit card details. These types of sensitive information should always be transmitted over HTTPS.
 
 
+Q : What is the actual use of JSON Web tokens ?
+JSON Web Tokens (JWTs) are a popular method for securely transmitting information between parties in the form of a digitally signed and encoded token. They are commonly used in web applications for authentication and authorization purposes.
+
+When a user successfully logs into a web application, the server generates a JWT that contains some information about the user, such as their username or user ID. This JWT is then sent back to the client, where it is stored in local storage or a cookie.
+
+In subsequent requests to the server, the client includes the JWT in the request headers. The server can then validate the JWT to confirm the user's identity and determine what actions they are authorized to perform.
+
+JWTs offer several advantages over traditional session-based authentication methods. For one, they allow for stateless authentication, meaning that the server does not need to keep track of active sessions. Additionally, they can be easily shared across different services or domains, making them ideal for scaling distributed systems.
 
 
+Q : What if I hijack a JWT from my friend's computer and then send the request using his's computer ? 
+If you hijack a JWT from your friend's computer, you could potentially use it to impersonate your friend and access their account or perform actions on their behalf. This is known as a token theft attack.
 
+However, there are several measures that can be taken to mitigate the risks of token theft attacks. Firstly, JWTs can be designed to have a short expiration time, so even if a token is stolen, it will automatically expire after a brief period of time. Additionally, JWTs can include information about the user's device or IP address, which can be used to detect suspicious activity and prevent unauthorized requests.
 
+It's also important to note that JWTs are just one part of a larger authentication and authorization system, and should not be relied upon as the sole method of securing an application. Other security measures, such as password policies, multi-factor authentication, and rate limiting, should also be implemented to further protect against attacks.
 
+Q : Why do we first upload our media files to our server and then from that server to the Media Server ? 
+Why not do directly from the client to the media server? 
+
+There are several reasons why it's generally not recommended to upload media files directly from the client to the media server:
+
+Security: Uploading from the client to the media server requires opening up ports on the media server, which can increase its attack surface and make it more vulnerable to security threats such as hacking attempts.
+
+Bandwidth: Depending on the size of the media file being uploaded, it can consume a significant amount of bandwidth, especially if multiple clients are uploading at the same time. This can slow down the media server and impact its performance.
+
+Resource consumption: Media servers are often designed to handle large numbers of requests simultaneously and may be optimized for processing media files in specific formats or codecs. If clients were allowed to upload media files directly to the media server, it could potentially consume significant amounts of resources, leading to degraded performance for other users.
+
+Scalability: By uploading media files to an intermediate server first, it allows for more efficient scaling of resources. The intermediate server can act as a buffer, allowing for better control over the flow of data and reducing the load on the media server.
+
+Overall, while it might seem more convenient to upload media files directly from the client to the media server, there are several good reasons why it's generally recommended to use an intermediate server instead.
 
 
