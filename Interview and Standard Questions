@@ -57,3 +57,34 @@ Scalability: By uploading media files to an intermediate server first, it allows
 Overall, while it might seem more convenient to upload media files directly from the client to the media server, there are several good reasons why it's generally recommended to use an intermediate server instead.
 
 
+Q : What are RESTful APIs ? 
+RESTful APIs are a type of web service that follows the principles of Representational State Transfer (REST) architecture. REST is an architectural style that uses HTTP requests to perform four basic operations:
+
+Create (POST)
+Read (GET)
+Update (PUT/PATCH)
+Delete (DELETE)
+A RESTful API is designed to be stateless, meaning that each request contains all the necessary information to complete the request and no client context is stored on the server between requests. This allows for scalability and reliability in distributed systems.
+
+In a RESTful API, resources are identified by their unique URL or endpoint, which can receive HTTP requests to execute the desired operation. The response usually comes in the form of JSON or XML data, providing the requested information or indicating the success or failure of the operation.
+
+One of the benefits of using RESTful APIs is that they allow applications to communicate with each other independently of the programming languages or platforms used. This makes it easier to integrate different systems and create more flexible, modular architectures.
+
+Q. What are pre and post middlewares in mongoose ?
+In Mongoose, middlewares are functions that can be executed before or after certain events occur on a model or a document.
+
+Pre-middlewares are executed before an event occurs. For example, you might want to run some validation logic before saving a document to the database. To do this, you could define a pre-save middleware function that checks the data for errors and only allows the save operation to proceed if everything is valid.
+
+Post-middlewares, on the other hand, are executed after an event has occurred. For example, you might want to perform some additional processing on a document after it has been saved to the database. To do this, you could define a post-save middleware function that runs after the save operation completes.
+
+Both pre and post middlewares are defined using Mongoose's pre and post methods respectively. These methods take two arguments: the name of the event (e.g. 'save', 'validate', etc.) and the middleware function to execute.
+
+Q. In which form is the data stored in MongoDB ? 
+In MongoDB, data is stored in a format called BSON (Binary JSON). BSON is a binary-encoded serialization of JSON-like documents that can contain various types of data such as strings, integers, floating-point numbers, dates, arrays, and nested documents.
+
+BSON is designed to be lightweight, efficient, and easy to parse. It allows MongoDB to store and retrieve data quickly, even for large datasets. BSON also supports advanced features such as indexing, querying, and aggregation, which makes it useful for complex data operations.
+
+One benefit of storing data in BSON format is that MongoDB uses a dynamic schema, meaning that each document can have its own unique set of fields. This allows for greater flexibility in the types of data that can be stored in MongoDB compared to traditional relational databases.
+
+Overall, BSON provides a flexible and efficient way to store data in MongoDB, allowing for fast and scalable data storage and retrieval.
+Both pre and post middlewares are defined using Mongoose's pre and post methods respectively. These methods take two arguments: the name of the event (e.g. 'save', 'validate', etc.) and the middleware function to execute.
