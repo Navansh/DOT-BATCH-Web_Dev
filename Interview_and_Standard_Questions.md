@@ -51,7 +51,7 @@ It's important to note that the event loop follows a "run-to-completion" model, 
 
 Q:Show use of event loop using timeout function 
 Ans : 
-```
+```javascript
 console.log("Start");
 
 setTimeout(() => {
