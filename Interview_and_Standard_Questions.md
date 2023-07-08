@@ -4,18 +4,19 @@ Ans : MongoDB and Node.js are two different technologies that can be used togeth
 
 ---
 
-Q: What is Node.js and what is its use? 
-Ans: Node.js is an open-source, server-side JavaScript runtime environment built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript code outside of a web browser, making it possible to build scalable and high-performance network applications.
+Q: What is Node.js and what is its use?   
 
-Node.js has several key features that make it popular and widely used:
+Ans: Node.js is an open-source, server-side JavaScript runtime environment built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript code outside of a web browser, making it possible to build scalable and high-performance network applications.  
 
-Asynchronous and Event-driven: Node.js uses an event-driven, non-blocking I/O model, which means it can handle multiple concurrent requests without getting blocked. This makes it highly efficient for handling large numbers of connections and performing I/O operations such as reading from or writing to databases, file systems, or network sockets.
+Node.js has several key features that make it popular and widely used:  
 
-JavaScript Everywhere: With Node.js, developers can use the same programming language (JavaScript) for both front-end and back-end development. This enables code reuse, accelerates development speed, and promotes a unified development approach.
+Asynchronous and Event-driven: Node.js uses an event-driven, non-blocking I/O model, which means it can handle multiple concurrent requests without getting blocked. This makes it highly efficient for handling large numbers of connections and performing I/O operations such as reading from or writing to databases, file systems, or network sockets.  
 
-Lightweight and Fast: Node.js has a minimalistic and lightweight design, making it fast and resource-efficient. Its ability to handle concurrent requests with a small memory footprint allows it to scale well, making it suitable for building real-time applications, APIs, microservices, and other network-intensive applications.
+JavaScript Everywhere: With Node.js, developers can use the same programming language (JavaScript) for both front-end and back-end development. This enables code reuse, accelerates development speed, and promotes a unified development approach.  
 
-NPM (Node Package Manager): Node.js comes bundled with npm, a powerful package manager that provides access to a vast ecosystem of open-source libraries and frameworks. This extensive collection of modules allows developers to leverage existing solutions, easily integrate third-party libraries, and rapidly develop complex applications.
+Lightweight and Fast: Node.js has a minimalistic and lightweight design, making it fast and resource-efficient. Its ability to handle concurrent requests with a small memory footprint allows it to scale well, making it suitable for building real-time applications, APIs, microservices, and other network-intensive applications.  
+
+NPM (Node Package Manager): Node.js comes bundled with npm, a powerful package manager that provides access to a vast ecosystem of open-source libraries and frameworks. This extensive collection of modules allows developers to leverage existing solutions, easily integrate third-party libraries, and rapidly develop complex applications.  
 
 Server-side Web Development: Node.js is commonly used for server-side web development, powering the backend of many popular websites and web applications. It offers frameworks like Express.js that provide a simple and flexible way to build web servers and APIs.
 
@@ -25,9 +26,10 @@ Real-time Applications: Due to its event-driven nature and support for WebSocket
 
 Overall, Node.js enables developers to build efficient, scalable, and high-performance applications using JavaScript across the entire technology stack. Its versatility and extensive ecosystem make it a popular choice for various types of projects.
 
+---
 
+Q: Explain the event loop in Javascript?   
 
-Q: Explain the event loop in Javascript? 
 Ans: The event loop is a fundamental concept in JavaScript that handles the execution of asynchronous code and ensures that JavaScript remains responsive to user interactions. It plays a crucial role in managing the flow of events, callbacks, and other asynchronous operations.
 
 In JavaScript, code execution occurs within an environment known as the event loop, which consists of two main components: the call stack and the callback queue.
@@ -50,9 +52,10 @@ By continuously monitoring the call stack and callback queue, the event loop ens
 
 It's important to note that the event loop follows a "run-to-completion" model, which means that it completes the execution of one task before moving on to the next. This ensures that JavaScript maintains its single-threaded nature and prevents blocking or freezing of the main thread.
 
+---
 
+Q:Show use of event loop using timeout function   
 
-Q:Show use of event loop using timeout function 
 Ans : 
 ```javascript
 console.log("Start");
@@ -85,18 +88,28 @@ By scheduling the callback using setTimeout with a delay of 0 milliseconds, we e
 This example illustrates how the event loop manages asynchronous operations like the setTimeout function and ensures that they are executed at the appropriate time, even if the delay is set to 0 milliseconds.
 
 
+---
 
+How is Node.js related to MongoDB?   
 
-How is Node.js related to MongoDB? 
 Ans : Node.js and MongoDB can be used together to build scalable and performant web applications. Node.js provides a JavaScript runtime environment that allows developers to write server-side code using JavaScript. It provides an event-driven model, non-blocking I/O, and a vast ecosystem of modules and libraries that make it easy to build scalable and performant applications. MongoDB, on the other hand, is a NoSQL database that stores data in a document-oriented format. It is designed to work well with unstructured data and provides features such as automatic sharding and replication for high availability and scalability. One of the benefits of using Node.js with MongoDB is that both technologies use JavaScript. This means that developers can use the same language throughout their entire stack, from the frontend to the backend, which can simplify development and reduce the learning curve.Node.js also provides a simple and efficient way to interact with MongoDB using drivers such as Mongoose or the native MongoDB driver. These drivers provide a set of APIs that allow developers to easily read, write, and modify data in the database using JavaScript.Overall, Node.js and MongoDB are two complementary technologies that can be used together to build scalable, performant, and easy-to-maintain web applications.
 
-Can we say that mongodb runs on node.js
+---
+
+Q : Can we say that mongodb runs on node.js ?
+
 Ans : No, MongoDB is not built on or run by Node.js. MongoDB is a standalone database management system that can be used with many programming languages, including JavaScript which is the language used by Node.js.Node.js can interact with MongoDB and provide an interface to it, but it does not run MongoDB. MongoDB runs as a separate process on its own server, regardless of what programming language is used to interact with it.However, Node.js can be used as a server-side technology for web applications that use MongoDB as their database. In this scenario, Node.js provides the application logic and interfaces with MongoDB to read and write data into the database. This allows developers to build end-to-end web applications using JavaScript.
 
-can node.js handle multithreading ? 
-Ans : Node.js is designed to be single-threaded, meaning it only uses one thread to process incoming requests and execute application code. However, Node.js does support asynchronous I/O operations, which allows it to handle multiple requests at the same time without blocking the event loop.  To take advantage of multiple CPU cores, Node.js provides a cluster module that allows developers to create a cluster of worker processes that can share the workload across multiple threads. Each worker process runs on a separate thread, which allows Node.js to take full advantage of multi-core systems.The cluster module works by creating child processes, each running an instance of the Node.js event loop, and sharing server sockets between them. When a new connection is received, the master process distributes it to one of the worker processes using a round-robin algorithm.It's important to note that while the cluster module allows Node.js to take advantage of multiple CPU cores, it does not provide true multithreading, as the worker processes are still single-threaded themselves. Instead, the cluster module creates multiple instances of the Node.js runtime environment, each with its own event loop and memory space.In summary, while Node.js itself is single-threaded, it provides the cluster module for developers to take advantage of multiple cores and distribute the workload across multiple worker processes.
+---
 
-Q: What are some myths/confusions/misconceptions about JSON Web Tokens
+Q: Can node.js handle multithreading ?  
+
+Ans : Node.js is designed to be single-threaded, meaning it only uses one thread to process incoming requests and execute application code. However, Node.js does support asynchronous I/O operations, which allows it to handle multiple requests at the same time without blocking the event loop.  To take advantage of multiple CPU cores, Node.js provides a cluster module that allows developers to create a cluster of worker processes that can share the workload across multiple threads. Each worker process runs on a separate thread, which allows Node.js to take full advantage of multi-core systems.The cluster module works by creating child processes, each running an instance of the Node.js event loop, and sharing server sockets between them. When a new connection is received, the master process distributes it to one of the worker processes using a round-robin algorithm.It's important to note that while the cluster module allows Node.js to take advantage of multiple CPU cores, it does not provide true multithreading, as the worker processes are still single-threaded themselves. Instead, the cluster module creates multiple instances of the Node.js runtime environment, each with its own event loop and memory space.In summary, while Node.js itself is single-threaded, it provides the cluster module for developers to take advantage of multiple cores and distribute the workload across multiple worker processes.  
+
+---
+
+Q: What are some myths/confusions/misconceptions about JSON Web Tokens ?   
+
 Ans : There are several myths and misconceptions about JSON Web Tokens (JWTs). Here are a few:
 
 JWTs are encryption mechanisms: One of the most common misconceptions is that JWTs are used for encryption or data protection. However, this is not true. JWTs are primarily used for authentication and authorization purposes.
@@ -109,8 +122,10 @@ JWTs are only useful for web applications: Although JWTs are commonly used in we
 
 JWTs contain sensitive information: While JWTs can carry information, including user data, they should not be used to transmit sensitive information like passwords or credit card details. These types of sensitive information should always be transmitted over HTTPS.
 
+---
 
-Q : What is the actual use of JSON Web tokens ?
+Q : What is the actual use of JSON Web tokens ?  
+
 JSON Web Tokens (JWTs) are a popular method for securely transmitting information between parties in the form of a digitally signed and encoded token. They are commonly used in web applications for authentication and authorization purposes.
 
 When a user successfully logs into a web application, the server generates a JWT that contains some information about the user, such as their username or user ID. This JWT is then sent back to the client, where it is stored in local storage or a cookie.
@@ -119,15 +134,21 @@ In subsequent requests to the server, the client includes the JWT in the request
 
 JWTs offer several advantages over traditional session-based authentication methods. For one, they allow for stateless authentication, meaning that the server does not need to keep track of active sessions. Additionally, they can be easily shared across different services or domains, making them ideal for scaling distributed systems.
 
+---
 
-Q : What if I hijack a JWT from my friend's computer and then send the request using his's computer ? 
+Q : What if I hijack a JWT from my friend's computer and then send the request using his's computer ?   
+
 If you hijack a JWT from your friend's computer, you could potentially use it to impersonate your friend and access their account or perform actions on their behalf. This is known as a token theft attack.
 
 However, there are several measures that can be taken to mitigate the risks of token theft attacks. Firstly, JWTs can be designed to have a short expiration time, so even if a token is stolen, it will automatically expire after a brief period of time. Additionally, JWTs can include information about the user's device or IP address, which can be used to detect suspicious activity and prevent unauthorized requests.
 
-It's also important to note that JWTs are just one part of a larger authentication and authorization system, and should not be relied upon as the sole method of securing an application. Other security measures, such as password policies, multi-factor authentication, and rate limiting, should also be implemented to further protect against attacks.
+It's also important to note that JWTs are just one part of a larger authentication and authorization system, and should not be relied upon as the sole method of securing an application. Other security measures, such as password policies, multi-factor authentication, and rate limiting, 
+should also be implemented to further protect against attacks.
 
-Q : Why do we first upload our media files to our server and then from that server to the Media Server ? 
+---
+
+Q : Why do we first upload our media files to our server and then from that server to the Media Server ?   
+
 Why not do directly from the client to the media server? 
 
 There are several reasons why it's generally not recommended to upload media files directly from the client to the media server:
@@ -142,8 +163,10 @@ Scalability: By uploading media files to an intermediate server first, it allows
 
 Overall, while it might seem more convenient to upload media files directly from the client to the media server, there are several good reasons why it's generally recommended to use an intermediate server instead.
 
+---
 
-Q : What are RESTful APIs ? 
+Q : What are RESTful APIs ?   
+
 RESTful APIs are a type of web service that follows the principles of Representational State Transfer (REST) architecture. REST is an architectural style that uses HTTP requests to perform four basic operations:
 
 Create (POST)
@@ -156,16 +179,22 @@ In a RESTful API, resources are identified by their unique URL or endpoint, whic
 
 One of the benefits of using RESTful APIs is that they allow applications to communicate with each other independently of the programming languages or platforms used. This makes it easier to integrate different systems and create more flexible, modular architectures.
 
-Q. What are pre and post middlewares in mongoose ?
+---
+
+Q. What are pre and post middlewares in mongoose ?  
+
 In Mongoose, middlewares are functions that can be executed before or after certain events occur on a model or a document.
 
 Pre-middlewares are executed before an event occurs. For example, you might want to run some validation logic before saving a document to the database. To do this, you could define a pre-save middleware function that checks the data for errors and only allows the save operation to proceed if everything is valid.
 
 Post-middlewares, on the other hand, are executed after an event has occurred. For example, you might want to perform some additional processing on a document after it has been saved to the database. To do this, you could define a post-save middleware function that runs after the save operation completes.
 
-Both pre and post middlewares are defined using Mongoose's pre and post methods respectively. These methods take two arguments: the name of the event (e.g. 'save', 'validate', etc.) and the middleware function to execute.
+Both pre and post middlewares are defined using Mongoose's pre and post methods respectively. These methods take two arguments: the name of the event (e.g. 'save', 'validate', etc.) and the middleware function to execute.  
 
-Q. In which form is the data stored in MongoDB ? 
+---
+
+Q. In which form is the data stored in MongoDB ?   
+
 In MongoDB, data is stored in a format called BSON (Binary JSON). BSON is a binary-encoded serialization of JSON-like documents that can contain various types of data such as strings, integers, floating-point numbers, dates, arrays, and nested documents.
 
 BSON is designed to be lightweight, efficient, and easy to parse. It allows MongoDB to store and retrieve data quickly, even for large datasets. BSON also supports advanced features such as indexing, querying, and aggregation, which makes it useful for complex data operations.
