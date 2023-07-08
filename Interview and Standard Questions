@@ -1,7 +1,90 @@
 What is difference between MongoDB and Node.js ? 
 Ans : MongoDB and Node.js are two different technologies that can be used together to build web applications, but they serve different purposes. MongoDB is a NoSQL database that stores data in a document-oriented format. It is designed to work well with unstructured data and provides features such as automatic sharding and replication for high availability and scalability. Node.js, on the other hand, is a JavaScript runtime environment that allows developers to run JavaScript code outside of a browser. It is often used for building server-side applications, such as web APIs or real-time chat applications. Node.js provides an event-driven model, non-blocking I/O, and a vast ecosystem of modules and libraries that make it easy to build scalable and performant applications. While MongoDB can be used with any programming language that has a driver available, Node.js is often used as the backend technology for web applications that use MongoDB as their database. Node.js provides a simple and efficient way to interact with MongoDB, allowing developers to easily read, write, and modify data in the database using JavaScript.
 
-How is Node.js related to MongoDB ? 
+Q: What is Node.js and what is its use? 
+Ans: Node.js is an open-source, server-side JavaScript runtime environment built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript code outside of a web browser, making it possible to build scalable and high-performance network applications.
+
+Node.js has several key features that make it popular and widely used:
+
+Asynchronous and Event-driven: Node.js uses an event-driven, non-blocking I/O model, which means it can handle multiple concurrent requests without getting blocked. This makes it highly efficient for handling large numbers of connections and performing I/O operations such as reading from or writing to databases, file systems, or network sockets.
+
+JavaScript Everywhere: With Node.js, developers can use the same programming language (JavaScript) for both front-end and back-end development. This enables code reuse, accelerates development speed, and promotes a unified development approach.
+
+Lightweight and Fast: Node.js has a minimalistic and lightweight design, making it fast and resource-efficient. Its ability to handle concurrent requests with a small memory footprint allows it to scale well, making it suitable for building real-time applications, APIs, microservices, and other network-intensive applications.
+
+NPM (Node Package Manager): Node.js comes bundled with npm, a powerful package manager that provides access to a vast ecosystem of open-source libraries and frameworks. This extensive collection of modules allows developers to leverage existing solutions, easily integrate third-party libraries, and rapidly develop complex applications.
+
+Server-side Web Development: Node.js is commonly used for server-side web development, powering the backend of many popular websites and web applications. It offers frameworks like Express.js that provide a simple and flexible way to build web servers and APIs.
+
+Microservices Architecture: Node.js works well in a microservices architecture, where applications are composed of small, independent services communicating with each other via lightweight protocols like REST or WebSocket. Its event-driven nature and scalability make it a suitable choice for building microservices-based systems.
+
+Real-time Applications: Due to its event-driven nature and support for WebSockets, Node.js is particularly well-suited for building real-time applications like chat platforms, collaboration tools, multiplayer games, and streaming applications.
+
+Overall, Node.js enables developers to build efficient, scalable, and high-performance applications using JavaScript across the entire technology stack. Its versatility and extensive ecosystem make it a popular choice for various types of projects.
+
+
+
+Q: Explain the event loop in Javascript? 
+Ans: The event loop is a fundamental concept in JavaScript that handles the execution of asynchronous code and ensures that JavaScript remains responsive to user interactions. It plays a crucial role in managing the flow of events, callbacks, and other asynchronous operations.
+
+In JavaScript, code execution occurs within an environment known as the event loop, which consists of two main components: the call stack and the callback queue.
+
+Call Stack: The call stack is a data structure that keeps track of the execution context of currently running functions. Whenever a function is invoked, a new frame is added to the top of the call stack. The JavaScript engine executes functions in a synchronous manner, meaning it goes through the code line by line and completes each function before moving on to the next one.
+
+Callback Queue: The callback queue is a queue that holds tasks or functions that are ready to be executed once the call stack becomes empty. These tasks typically include callbacks from asynchronous operations such as API requests, timer events, or user interactions.
+
+Here's how the event loop works:
+
+When the JavaScript engine encounters an asynchronous operation, such as making an API request or registering an event listener, it initiates the operation and continues executing the rest of the code without waiting for the result. This allows the program to remain responsive while the operation is being processed.
+
+Once the asynchronous operation is completed, a corresponding callback function is placed in the callback queue.
+
+If the call stack is empty, the event loop takes the first callback from the callback queue and pushes it onto the call stack for execution. This causes the callback function to run and perform its designated task.
+
+The JavaScript engine then resumes checking the call stack and the callback queue. If there are more callbacks in the queue, it repeats the process by pushing them onto the call stack one by one.
+
+By continuously monitoring the call stack and callback queue, the event loop ensures that asynchronous tasks are executed in the correct order and at the appropriate time. It allows JavaScript to handle non-blocking I/O operations effectively and maintain a responsive user interface.
+
+It's important to note that the event loop follows a "run-to-completion" model, which means that it completes the execution of one task before moving on to the next. This ensures that JavaScript maintains its single-threaded nature and prevents blocking or freezing of the main thread.
+
+
+
+Q:Show use of event loop using timeout function 
+Ans : 
+```
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Inside setTimeout callback");
+}, 0);
+
+console.log("End");
+```
+
+In this example, we have a setTimeout function that schedules a callback to be executed after a specified delay. Even though the delay is set to 0 milliseconds, the callback function is not immediately executed. Instead, it gets added to the callback queue, and the event loop will handle its execution when the call stack is empty.
+
+Here's how the code execution unfolds:
+
+The console.log("Start") statement is executed, printing "Start" to the console.
+
+The setTimeout function is called with a callback function and a delay of 0 milliseconds. This schedules the callback for execution but doesn't block the execution flow.
+
+The console.log("End") statement is executed, printing "End" to the console.
+
+At this point, the call stack is empty. The event loop checks the callback queue and finds the callback function from the setTimeout.
+
+The callback function is pushed onto the call stack.
+
+The callback function is executed, printing "Inside setTimeout callback" to the console.
+
+By scheduling the callback using setTimeout with a delay of 0 milliseconds, we ensure that it will be placed in the callback queue as soon as possible. However, as JavaScript follows the event loop mechanism, it won't execute the callback immediately; it waits for the call stack to be empty.
+
+This example illustrates how the event loop manages asynchronous operations like the setTimeout function and ensures that they are executed at the appropriate time, even if the delay is set to 0 milliseconds.
+
+
+
+
+How is Node.js related to MongoDB? 
 Ans : Node.js and MongoDB can be used together to build scalable and performant web applications. Node.js provides a JavaScript runtime environment that allows developers to write server-side code using JavaScript. It provides an event-driven model, non-blocking I/O, and a vast ecosystem of modules and libraries that make it easy to build scalable and performant applications. MongoDB, on the other hand, is a NoSQL database that stores data in a document-oriented format. It is designed to work well with unstructured data and provides features such as automatic sharding and replication for high availability and scalability. One of the benefits of using Node.js with MongoDB is that both technologies use JavaScript. This means that developers can use the same language throughout their entire stack, from the frontend to the backend, which can simplify development and reduce the learning curve.Node.js also provides a simple and efficient way to interact with MongoDB using drivers such as Mongoose or the native MongoDB driver. These drivers provide a set of APIs that allow developers to easily read, write, and modify data in the database using JavaScript.Overall, Node.js and MongoDB are two complementary technologies that can be used together to build scalable, performant, and easy-to-maintain web applications.
 
 Can we say that mongodb runs on node.js
