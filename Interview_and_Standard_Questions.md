@@ -203,3 +203,54 @@ One benefit of storing data in BSON format is that MongoDB uses a dynamic schema
 
 Overall, BSON provides a flexible and efficient way to store data in MongoDB, allowing for fast and scalable data storage and retrieval.
 Both pre and post middlewares are defined using Mongoose's pre and post methods respectively. These methods take two arguments: the name of the event (e.g. 'save', 'validate', etc.) and the middleware function to execute.
+
+---
+
+Q: What is the use of "value" field here ? 
+```javascript
+<input
+          required
+          type="text"
+          name="email"
+          value={email}
+          onChange={handleOnChange}
+          placeholder="Enter email address"
+          style={{
+            boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
+          }}
+          className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
+        />
+```
+Ans : In the provided code snippet, the "value" field is used to bind the value of the input field to a corresponding variable in the code. In this case, the variable is likely named "email" and its value is being set as the current value of the input field.
+
+By setting the "value" attribute to the "email" variable, any changes made by the user in the input field will automatically update the value of the "email" variable. This allows you to access and use the updated email value in your JavaScript code or framework.
+
+For example, if the user enters "example@example.com" in the input field, the "email" variable will be updated with the corresponding value. You can then use this value for validation, submission, or any other operation related to the entered email address.  
+
+Q : What will happen if I remove this value field?   
+Ans : If you remove the "value" field from the code snippet, the input field will no longer be bound to a specific value in your code. As a result, the input field will not display any initial value and any changes made by the user will not be stored or updated in a variable.
+
+Without the "value" field, the input field will become an uncontrolled component. This means that its value will only exist within the DOM and won't be accessible or controlled through your code. If you need to retrieve or manipulate the value entered by the user, you would have to rely on other means such as using JavaScript to read the value directly from the DOM.
+
+In most cases, it is recommended to have the "value" field present and bind it to a corresponding variable so that you can easily access and manage the input field's value in your code.
+
+---
+
+Q: What is the use of e.preventDefault() function here ? 
+```javascript
+const signin = async (e) => {
+    e.preventDefault();
+    const response = await createUserWithEmailAndPassword(auth, email, password)
+    console.log(response)
+
+  }
+```
+Ans : The e.preventDefault() function is used to prevent the default behavior of an event in JavaScript. In the provided code snippet, it is specifically used within the signin function as part of an event handler for a form submission.
+
+When a form is submitted, the default behavior of the browser is to refresh the page or navigate to a new page. By calling e.preventDefault() within the event handler, you are instructing the browser to not perform its default action.
+
+In this case, preventing the default behavior is important because the signin function likely performs an asynchronous operation using await createUserWithEmailAndPassword(auth, email, password). If the default behavior was not prevented and the page refreshed or navigated to a new page, the asynchronous operation may not complete properly or the result may be lost.
+
+By calling e.preventDefault(), you ensure that the form submission does not trigger a page refresh or navigation, allowing the signin function to execute asynchronously and capturing the response from createUserWithEmailAndPassword. The captured response is then logged to the console using console.log(response) for further analysis or handling.
+
+
