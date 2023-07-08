@@ -1,5 +1,8 @@
-What is difference between MongoDB and Node.js ? 
+What is difference between MongoDB and Node.js ?   
+
 Ans : MongoDB and Node.js are two different technologies that can be used together to build web applications, but they serve different purposes. MongoDB is a NoSQL database that stores data in a document-oriented format. It is designed to work well with unstructured data and provides features such as automatic sharding and replication for high availability and scalability. Node.js, on the other hand, is a JavaScript runtime environment that allows developers to run JavaScript code outside of a browser. It is often used for building server-side applications, such as web APIs or real-time chat applications. Node.js provides an event-driven model, non-blocking I/O, and a vast ecosystem of modules and libraries that make it easy to build scalable and performant applications. While MongoDB can be used with any programming language that has a driver available, Node.js is often used as the backend technology for web applications that use MongoDB as their database. Node.js provides a simple and efficient way to interact with MongoDB, allowing developers to easily read, write, and modify data in the database using JavaScript.
+
+---
 
 Q: What is Node.js and what is its use? 
 Ans: Node.js is an open-source, server-side JavaScript runtime environment built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript code outside of a web browser, making it possible to build scalable and high-performance network applications.
